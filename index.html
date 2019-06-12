@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>River Simulation</title>
+		<!-- Latest compiled and minified CSS -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="shortcut icon" type="img/png" href="img/fav.png"/>
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<header class="heightZero">
+			
+			<!-- <button type="btn btn-default">hello</button> -->
+			<div class="row heightZero">
+				<div class="col-md-6 col-sm-6 col-xs-6 heightZero">
+					<div class="home-icon">
+						<a href="index.html">
+						<img src="img/home.png" alt=""  class="top-ico">
+					   </a>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 sugg-container heightZero">
+					
+					<div class="info-icon" id='information'>
+						<img src="img/info.png" alt="" class="top-ico">
+						<span class="i-information">Identify and mark the important cities that fall on the passage of the river Ganga.
+                        <span class="tooltipArrow"></span>
+						</span>
+					</div>
+					<div class=" info-icon suggestion" id='suggestion'>
+						<img src="img/suggestion.png" alt="" class="top-ico suggImg suggImglast">
+						<img src="img/suggestion3.png" alt="" class="top-ico suggImg suggImg0">
+						<img src="img/suggestion1.png" alt="" class="top-ico suggImg suggImg1">
+						<img src="img/suggestion2.png" alt="" class="top-ico suggImg suggImg2">
+						<img src="img/suggestion3.png" alt="" class="top-ico suggImg suggImg3">
+						<!-- <img src="img/suggestion4.png" alt="" class="top-ico suggImg suggImg4"> -->
+						<span class="suggestion-information">Click here for the hint.
+                        <span class="tooltipArrow"></span>
+						</span>
+					</div>
+				</div>
+			</div>
+		</header>
+	
+		<main>
+			<div class="row">
+				<div class="col-md-7 containerTwo col-md-push-5 animated fadeInRight">
+					<div class="mapContainer">
+						<div class="mapImgContainer">
+							<img src="img/indiaMap2.png" class="mapImg" alt="">
+							<img src="img/indiaMap2.png" class="mapImg mapImg2" alt="" style="display: none;">
+							<img src="img/indiaMap3.png" class="mapImg mapImg2" alt="" style="display: none;">
+							<img src="img/indiaMap4.png" class="mapImg mapImg2" alt="" style="display: none;">
+							<img src="img/mapwithdots.png" class="mapImg mapImg2" alt="" style="display: none;">
+					    </div>
+					    <div id="dropPin" class="ui-widget-content pulse ">
+					    	
+					    </div>
+					    <div id='inContainer'>
+						    <div class="instruction">
+						    	<p><b style="font-size:16px;">Instruction</b> <br><br>Drop the blue location pin on the correct place based on the given information.</p>
+						    	<button class="next btn-default">NEXT</button>
+						    </div>
+						     <div class="instruction2">
+						    	<p><b style="font-size:16px;">City 1</b> <br><br> It is the first place down the mountain that welcomes the holy river Ganga.</p>
+						    	<button class="next btn-default">NEXT</button>
+						    </div>
+					   </div>
+					    <div class="pinContainer " id='pin'>
+					       <img src="img/pin.png" class="ui-widget-content " >
+					    </div>
+
+					    <div class="wellDone">Well Done !
+						   <!-- <span id="cross"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+					    </div>
+					      <div class="error">Incorrect Location
+						   <!-- <span id="cross"><i class="fa fa-times" aria-hidden="true"></i></span> -->
+					    </div>
+					    <ul class="cities">
+					    	<li>Patna</li>
+					    	<li class="Active">Haridwar</li>
+					    	<li>Bareily</li>
+					    	<li>Gaya</li>
+					    	 <div class="secondIns">Which city is this?<span></span></div>
+					    </ul>
+
+                        <!-- correct ans  -->
+					    <div class="rightAns">
+					       <img src="img/pin.png">
+					       <p class="btnStyle">Haridwar</p><div class="dotPointer"></div>
+					         <p class="p2 btnStyle">Correct answer</p>
+					    </div>
+					    <!-- correct ans -->
+
+					    <!-- use hint -->
+					<div class="useHint hintBox">
+						<p style="text-align: center; padding-bottom: 10px;">You have <span id="remainHint">3</span> hints left</p>
+						<p>
+						<button id='showHint' class="btnStyle">Use Hint</button>
+						<span>or</span>
+						<button class="prev btnStyle">Try Again</button>
+					    </p>
+					</div>
+					<!-- use hint end -->
+
+					<!-- use hint1 -->
+					<div class="Hint1 hintBox text-center">
+						<p><b style="font-size:16px;">Hint</b> <br><br>
+							 "Har ki puri" is situated here.
+					    </p>
+					    <button class="btnStyle Hintfunction prev">OKAY</button>
+					</div>
+					<!-- use hint1 end -->
+
+
+					<!-- use hint2 -->
+					<div class="Hint2 hintBox text-center">
+					   <p> <img src="img/Haridwar-Image.png"></p>
+					    <button class="btnStyle Hintfunction prev">OKAY</button>
+					</div>
+					<!-- use hint2 end -->
+
+						<!-- use hint2 -->
+					<div class="Hint3 hintBox text-center">
+					   <p>Drop the pin on the correct location amongst the highlighted cities.</p>
+					    <button class="btnStyle Hintfunction prev lastOption">OKAY</button>
+					</div>
+					<!-- use hint2 end -->
+
+					<!-- use hint2 -->
+					<div class="Hint4 hintBox text-center">
+					   <p> <img src="img/Haridwar-Image.png"></p>
+					    <button class="btnStyle Hintfunction prev ">OKAY</button>
+					</div>
+					<!-- use hint2 end -->
+
+					</div>
+				</div>
+
+
+				<div class="col-md-5 containerOne col-md-pull-7 animated fadeInLeft">
+					<div class="riverContainer " >
+						<p class="quest">
+							<span class="questHeader">Question</span>
+						City 1: It is the first place down the mountain that welcomes the holy river Ganga.
+					   </p>
+				
+						<div class="selectRiver">
+							<h3>rivers of india</h3>
+							<p>River Name</p>
+							<select class="form-control">
+								<option value="ganga">GANGA</option>
+							</select>
+							<p>Origin</p>
+							<select class="form-control arr">
+								<option value="gomukh">GOMUKH</option>
+							</select>
+							<p>End Point</p>
+							<select class="form-control arr">
+								<option>BAY OF BENGAL</option>
+							</select>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+		</main>
+
+		 <footer class="heightZero">
+			<div class="row heightZero">
+				<div class="col-md-6 col-sm-6 col-xs-6 heightZero">
+					<div class="home-icon prev" id='prev'>
+						<p class="prevComplete comp">Complete the action
+							<span class="compArrow"></span>
+						</p>
+						<img src="img/prev.png" alt=""  class="top-ico">
+					</div>
+					<!-- <div class="home-icon prev" id='prev2'>
+						<img src="img/prev.png" alt=""  class="top-ico">
+					</div> -->
+				</div>
+				<div class="col-md-6 col-sm-6 col-xs-6 heightZero">
+					<div class="info-icon next" id='next'>
+						<p class="nextComplete comp">Complete the action
+							<span class="compArrow"></span>
+						</p>
+						<img src="img/next.png" alt=""  class="top-ico">
+					</div>
+				
+				</div>
+			</div>
+	    </footer>
+<iframe src="audio/instruction.mp3" allow="autoplay" style="display:none" id="iframeAudio" ></iframe>
+<iframe src="audio/background.mp3" allow="autoplay" style="display:none" id="iframeAudio" ></iframe>
+
+<div class="AudioContainer">
+	
+</div>
+	
+    </div>
+
+    <!-- container end -->
+<script src="js/drag.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+<!--     display: inline-block;
+    width: 200%;
+    margin-left: -297px;
+    margin-top: -185px;
+    #52b0e2 -->

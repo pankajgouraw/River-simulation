@@ -1,0 +1,171 @@
+
+
+@media screen and (min-width: 564px) and (max-width: 991px)  {
+ .selectRiver {width:280px; margin-bottom:80px;}
+
+
+     #pin{
+            top: 73px;
+    }
+
+   
+  .mapContainer {
+    width: 519px;
+    height: 620px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    }
+    .quest{
+      padding-top: 70px;
+    padding-bottom: 14px;
+    padding-left: 0px;
+    font-weight: bold;
+    font-size: 13px;
+    padding-right: 0px;
+    /* display: none; */
+    width: 280px;
+    margin: auto;
+    }
+    .instruction2{width: 350px;
+      left:19%;
+
+    }
+    .instruction{
+      width: 350px;
+      left:19%;
+    }
+
+    .top-ico{
+      width:60px;
+    }
+
+    #dropPin{
+    height: 19px;
+    width: 18px;
+    top: 90px;
+    left: 22px;
+    }
+
+    .cities{
+      left:83px;
+    }
+
+    .dotPointer{
+        height: 15px;
+        width: 15px;
+        left: 17px;
+    }
+    .rightAns{
+        top: 46px;
+        left: 27px;
+    }
+
+    .rightAns p{
+      left: -10px;
+    }
+
+    .error {
+      left: 25%;
+    }
+
+    .useHint {
+      left: 28% !important;
+    }
+
+    .suggestion .suggestion-information{
+        top: 70px;
+        left: -118px;
+    }
+    .Hint2 img{
+          width: 370px;
+    }
+  
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 0px) and (max-width: 564px) {
+
+    #pin{
+            top: 73px;
+    }
+  
+
+    .selectRiver {width:280px; margin-bottom:80px;}
+
+    .mapContainer {
+            width: 300px;
+    height: 358px;
+    margin-top: 80px;
+    margin-bottom: 0px;
+    }
+    .quest{
+      padding-top: 70px;
+    padding-bottom: 14px;
+    padding-left: 0px;
+    font-weight: bold;
+    font-size: 13px;
+    padding-right: 0px;
+    /* display: none; */
+    width: 280px;
+    margin: auto;
+    }
+    .instruction2{width: 250px;
+
+    }
+    .instruction{
+      width: 250px;
+
+    }
+
+    .top-ico{
+      width:50px;
+    }
+
+    #dropPin{
+       height: 15px;
+       width: 15px;
+        top: 100px;
+       left: 20px;
+    }
+
+    .cities{
+      left:83px;
+    }
+
+    .dotPointer{
+        height: 15px;
+        width: 15px;
+        left: 17px;
+    }
+    .rightAns{
+        top: 46px;
+        left: 3px;
+    }
+
+    .rightAns p{
+      left: -2px;
+    }
+
+    .error {
+      left: 7%;
+    }
+
+    .useHint {
+      left: 9% !important;
+    }
+
+    .suggestion .suggestion-information{
+        top: 61px;
+        left: -118px;
+    }
+    .Hint2 img{
+      width: 230px;
+    }
+  
+}
+
